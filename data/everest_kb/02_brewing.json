@@ -1,0 +1,23 @@
+[
+  {
+    "id": "BRW-SOP-101",
+    "department": "Brewing",
+    "title": "Everest Premium Lager Mash & Lautering Profile",
+    "subsection": "Brew House Operations",
+    "content": "The recipe for flagship Everest Premium Lager utilizes two-row spring barley malt combined with select adjunct grains. Mashing schedule follows a step-infusion profile: protein rest at 50°C for 20 minutes, saccharification rest at 65°C for 45 minutes for optimal beta-amylase activity, and mash-off at 76°C. Lautering sparge water pH is adjusted with food-grade phosphoric acid to 5.2-5.4 at 78°C to prevent extraction of harsh polyphenols and husk tannins. Extract yield target is 78.5% efficiency."
+  },
+  {
+    "id": "BRW-SOP-102",
+    "department": "Brewing",
+    "title": "Yeast Cell Pitching, Fermentation & Krausening SOP",
+    "subsection": "Fermentation & Cellar",
+    "content": "Fermentation utilizes proprietary lager strain Saccharomyces pastorianus (Strain EVR-04). Inoculation pitching rate is set to 1.2 million viable cells/mL/°Plato. Wort aeration oxygen concentration is maintained at 10-12 ppm dissolved O2. Fermentation proceeds in Cylindroconical Vessels (CCVs) at 10.5°C for 7 days until specific gravity reaches 1.010 (2.5°Plato). A diacetyl rest is performed by elevating tank temperature to 14.5°C for 48 hours to ensure total reduction of alpha-acetolactate below 0.03 mg/L before cold aging (lagering) at -1.0°C for a minimum of 14 days."
+  },
+  {
+    "id": "BRW-SOP-103",
+    "department": "Brewing",
+    "title": "Beer Quality Specifications & Pasteurization Units (PU)",
+    "subsection": "Quality Assurance",
+    "content": "Finished Everest Premium Lager specifications: Original Gravity 1.045 (11.2°Plato), Apparent Extract 1.008 (2.0°Plato), ABV 5.0% ± 0.1%, Bitterness 12 IBU (Herkules & Hallertau hops), Color 3.2 SRM, Carbonation 2.65 volumes CO2. Flash pasteurization target is 18 Pasteurization Units (PU) with a minimum of 15 PU and maximum of 25 PU at 72°C for 20 seconds. Dissolved oxygen in bright beer tanks (BBT) must remain strictly below 20 ppb to ensure a 180-day shelf-life stability."
+  }
+]

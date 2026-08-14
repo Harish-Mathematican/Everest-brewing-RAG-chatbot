@@ -1,0 +1,23 @@
+[
+  {
+    "id": "LOG-SOP-001",
+    "department": "Logistics",
+    "title": "Cold Chain Fleet Temperature Management & SLAs",
+    "subsection": "Fleet Distribution",
+    "content": "Everest Brewing operating fleet across regional distribution hubs must maintain strict cold-chain compliance. Unpasteurized kegs and draught product must be stored and transported between -1.5°C and +2.0°C. Standard finished packaged beer (cans/bottles) transport payload temperature must remain below +15°C to prevent flavor degradation and lightstruck oxidation. Real-time GPS telematics with IoT thermal sensors broadcast telemetry every 5 minutes. SLA for tier-1 retail distributors is 98.5% on-time in-full (OTIF). If transit temperature breaches +4.0°C for longer than 45 consecutive minutes, the shipment is flagged for automated QA sensory evaluation upon warehouse arrival."
+  },
+  {
+    "id": "LOG-SOP-002",
+    "department": "Logistics",
+    "title": "Keg Return & Returnable Glass Bottle Cycle SOP",
+    "subsection": "Reverse Logistics",
+    "content": "Everest Brewing operates a closed-loop reverse logistics network for 50L stainless steel Sankey D kegs and 341ml returnable industry standard bottles. Deposit collection is enforced at $30.00 per keg and $0.10-$0.20 per bottle. Empties collected from licensee venues are routed back to the primary hub via returning delivery trailers ('backhauling'). Target turnaround time for keg asset recycling is 21 days. Automated vision inspection systems at the receiving dock screen returned kegs for spear integrity and structural valve damage before entry into the automated washer line."
+  },
+  {
+    "id": "LOG-SOP-003",
+    "department": "Logistics",
+    "title": "Freight Dispatch Interruption & Weather Contingency",
+    "subsection": "Supply Chain Resilience",
+    "content": "During severe severe weather events impacting distribution corridors, dispatch supervisors must initiate Protocol Logistics-RED. Inventory buffer levels at regional cross-dock distribution centers are automatically bumped from 3 days to 7 days safety stock. Freight rerouting authorization requires approval from the Regional Logistics Director via Transportation Management module."
+  }
+]

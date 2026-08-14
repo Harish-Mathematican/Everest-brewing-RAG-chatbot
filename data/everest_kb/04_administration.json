@@ -1,0 +1,23 @@
+[
+  {
+    "id": "ADM-POL-301",
+    "department": "Administration",
+    "title": "ERP Procurement & Vendor Invoice Approval Matrix",
+    "subsection": "Finance & Procurement",
+    "content": "All raw material (malt, hops, packaging materials, chemicals) and logistics vendor procurements must be processed through Enterprise ERP Purchase Orders (PO). Purchase requisitions under $25,000 require Plant Procurement Manager approval. Requisitions between $25,000 and $250,000 require Regional Supply Chain Director sign-off. Requisitions exceeding $250,000 require VP Procurement authorization. Vendor invoices undergo automated 3-way matching (PO, Receiving GRN, Vendor Invoice) prior to payment run approval on Net 60 terms."
+  },
+  {
+    "id": "ADM-POL-302",
+    "department": "Administration",
+    "title": "Everest Brewing 2026 ESG & Sustainability Performance Targets",
+    "subsection": "Corporate Sustainability",
+    "content": "In alignment with Everest Brewing sustainability commitments, target metrics for 2026 are established: 1. 100% of purchased electricity sourced from renewable wind and solar energy, 2. Water Usage Ratio benchmark of 2.10 Liters of water per Liter of packaged beer produced across all operational breweries, 3. Carbon intensity reduction of 25% across Scope 1 and Scope 2 emissions compared to baseline, 4. 99.2% solid waste diversion from landfill across all packaging facilities."
+  },
+  {
+    "id": "ADM-POL-303",
+    "department": "Administration",
+    "title": "Capital Expenditure (CapEx) Request & Project SOP",
+    "subsection": "Corporate Strategy",
+    "content": "Capital expenditures for brewery automation, packaging line upgrades, or energy efficiency retrofits require a formal CapEx Business Case submission including ROI payback period (< 3.0 years required), Net Present Value (NPV), and internal rate of return (IRR > 14%). Projects are submitted quarterly to the Investment Committee."
+  }
+]

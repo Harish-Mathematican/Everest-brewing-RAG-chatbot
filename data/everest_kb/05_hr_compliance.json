@@ -1,0 +1,58 @@
+[
+  {
+    "id": "HRC-POL-401",
+    "department": "Other",
+    "title": "Employee Vacation, Paid Time Off (PTO) & Leave Entitlement Policy",
+    "subsection": "Human Resources & Benefits",
+    "content": "Everest Brewing employee annual vacation and leave accrual is structured by cumulative tenure: 1. Years 1 to 3 of Service: 15 paid vacation days (3 weeks) per calendar year, 2. Years 4 to 7 of Service: 20 paid vacation days (4 weeks) per calendar year, 3. Years 8 to 12 of Service: 25 paid vacation days (5 weeks) per calendar year, 4. Years 13+ of Service: 30 paid vacation days (6 weeks) per calendar year. In addition to standard vacation, all permanent employees receive: A) 5 fully paid Personal / Sick Days per year, B) 10 recognized Statutory Holidays (compensated at regular pay, or 2.0x double-time premium if rostered to work), C) Paid Bereavement Leave: Up to 5 consecutive days for immediate family members, D) Paid Jury Duty & Subpoena Leave up to 10 working days."
+  },
+  {
+    "id": "HRC-POL-402",
+    "department": "Other",
+    "title": "Parental, Maternity & Family Medical Leave Standards",
+    "subsection": "Human Resources & Benefits",
+    "content": "Everest Brewing provides progressive family support leave programs: 1. Maternity & Parental Leave Top-Up: Eligible employees welcoming a new child (birth, adoption, or surrogacy) receive a company top-up to 100% of regular base salary for the first 16 weeks of leave. 2. Extended Parental Leave: Up to 61 additional weeks of job-protected unpaid parental leave in accordance with employment standards. 3. Compassionate Care Leave: Up to 28 weeks of job-protected leave to provide care to a critically ill family member with employment continuity."
+  },
+  {
+    "id": "HRC-POL-403",
+    "department": "Other",
+    "title": "Healthcare, Dental, Mental Wellness & Pension Benefits Package",
+    "subsection": "Compensation & Benefits",
+    "content": "Everest Brewing provides comprehensive benefit coverage effective on the first day of the month following 30 days of employment: 1. Medical & Prescription Drug Plan: 100% employer-funded prescription drug coverage with direct-pay card. 2. Dental Coverage: 100% basic dental (checkups, cleanings every 6 months) and 80% major restorative (crowns, bridges) up to $2,500/year. 3. Vision Care: $450 every 24 months for prescription eyewear/contacts and annual full eye exam. 4. Mental Health & Wellness: $1,000 per year per family member for registered psychologists/social workers plus 24/7 Employee Assistance Program (EAP). 5. Group Retirement Pension Plan: Everest matches 100% of employee contributions up to 6% of annual base salary."
+  },
+  {
+    "id": "HRC-POL-404",
+    "department": "Other",
+    "title": "24/7 Shift Schedules, Overtime Rules & Shift Differential Premiums",
+    "subsection": "Employee Relations & Payroll",
+    "content": "Everest operational brewing and packaging plants operate on a 24/7 continuous rotating shift roster: Morning Shift (07:00 - 15:00), Afternoon Shift (15:00 - 23:00), Night Shift (23:00 - 07:00). Shift differential wage premiums are added directly to base pay: Afternoon Shift receives an additional +$1.25 per hour; Night Shift receives an additional +$2.50 per hour. Overtime compensation is paid at 1.5x regular base rate for all hours exceeding 8 hours per day or 40 hours per week, and 2.0x double-time for any hours worked on designated company holidays. Mandatory 12-hour rest intervals are enforced between shifts."
+  },
+  {
+    "id": "HRC-SAF-405",
+    "department": "Other",
+    "title": "Brewery Health, Safety, Chemical Management & PPE Matrix SOP",
+    "subsection": "Health & Safety",
+    "content": "All brewery personnel and contractors must comply with Everest 'Target Zero' safety guidelines. Mandatory baseline PPE in all active production and cellar areas includes CSA Grade-1 steel-toe boots, high-visibility vest, safety glasses with side shields, and hearing protection in zones exceeding 85 dBA. Handling of Clean-In-Place (CIP) chemicals (sodium hydroxide NaOH 2.2% at 80°C, peracetic acid PAA 0.5%) strictly requires chemical safety certification, chemical splash goggles, heavy neoprene gloves, and full face shield. Emergency eyewash and deluge shower stations are tested weekly and logged."
+  },
+  {
+    "id": "HRC-SAF-406",
+    "department": "Other",
+    "title": "Confined Space Entry (CSE) & Atmospheric Monitoring Program",
+    "subsection": "Safety & EHS",
+    "content": "Entering brewery vessels (Cylindroconical Vessels CCVs, Bright Beer Tanks BBT, Mash Tuns, Grain Silos) constitutes a permit-required Confined Space Entry under OSHA 29 CFR 1910.146 and provincial OHS standards. Requirements: 1. Written and signed Entry Permit by Shift EHS Supervisor, 2. Atmospheric testing with calibrated multi-gas detector for O2 levels (19.5% - 23.5% required, nominal 20.9%), CO2 concentration (< 0.5% / 5000 ppm TWA), and combustible vapors, 3. Continuous mechanical forced-air ventilation, 4. Dedicated external safety attendant with direct line-of-sight and rescue tripod retrieval harness, 5. Zero-energy Lockout/Tagout (LOTO) verification on all inlet/outlet product and CIP valves."
+  },
+  {
+    "id": "HRC-SAF-407",
+    "department": "Other",
+    "title": "Ammonia (NH3) Refrigeration Process Safety Management (PSM)",
+    "subsection": "Safety & EHS",
+    "content": "Everest Brewery central ammonia refrigeration systems operate under strict Process Safety Management (PSM OSHA 29 CFR 1910.119 / ANSI-IIAR standards). Operational safeguards include: 1. Continuous automated electrochemical NH3 leak detectors with automated audio/visual alarms triggered at 25 ppm (Warning) and 50 ppm (Emergency evacuation & automated ventilation activation), 2. Annual safety relief valve testing, 3. Mandatory SCBA (Self-Contained Breathing Apparatus) access outside machine room doors, 4. Immediate plant evacuation and designated muster station roll call upon alarm activation."
+  },
+  {
+    "id": "HRC-SAF-408",
+    "department": "Other",
+    "title": "Mandatory Annual Safety Recertification & Training Matrix",
+    "subsection": "Training & Compliance",
+    "content": "All plant personnel must maintain active annual safety certifications: 1. Lockout/Tagout (LOTO) Energy Isolation (annual practical exam), 2. Confined Space Entrant & Attendant (annual certification), 3. WHMIS 2015 Chemical Safety (annual refresh), 4. Powered Industrial Truck / Forklift License (3-year renewal), 5. HACCP & Food Safety Fundamentals (annual audit readiness). Certification expiry alerts are generated 30 days prior to expiration."
+  }
+]

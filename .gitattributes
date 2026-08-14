@@ -1,0 +1,3 @@
+# Treat data JSON files and batch files as documentation/vendor so Python is primary language
+data/** linguist-documentation
+run_streamlit.bat linguist-documentation
