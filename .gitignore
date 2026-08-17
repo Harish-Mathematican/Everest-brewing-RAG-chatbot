@@ -1,39 +1,29 @@
-# Python
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
-*.so
-.Python
-env/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
+
+# Environment variables & virtual envs
+.env
+.venv/
 venv/
+env/
 ENV/
 
-# Environment variables & secrets
-.env
-
-# Vector databases & local cache
-.chroma/
-.faiss/
+# Data & Uploads
+data/uploads/
+*.sqlite
 *.db
-*.sqlite3
 
-# IDEs & System
+# Streamlit & IDE
+.streamlit/secrets.toml
 .vscode/
 .idea/
+*.swp
+*.swo
 .DS_Store
-Thumbs.db
+
+# Testing & Cache
+.pytest_cache/
+.coverage
+htmlcov/

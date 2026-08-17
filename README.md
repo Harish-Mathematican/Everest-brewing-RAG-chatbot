@@ -1,110 +1,196 @@
-# 🏔️ Everest Brewing — Enterprise RAG AI Assistant & SCADA Operational Dashboard
-### *Pure Python & SQL Edition (Streamlit + SQLite + Plotly)*
+# ⚡ #GyanLabs-Enterprise-RAG: Advanced Multi-Source Retrieval-Augmented Generation Platform
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit%20Cloud-FF4B4B?style=for-the-badge&logo=streamlit)](https://everest-brewing-rag.streamlit.app/)
-[![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.61%2B-FF4B4B.svg)](https://streamlit.io/)
-[![SQLite](https://img.shields.io/badge/SQLite-Database-003B57.svg)](https://www.sqlite.org/)
-[![Plotly](https://img.shields.io/badge/Plotly-Interactive%20Charts-3F4F75.svg)](https://plotly.com/)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Status](https://img.shields.io/badge/Production-Ready-success.svg)]()
+[![Python Version](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
+[![Streamlit UI](https://img.shields.io/badge/Streamlit-Interactive%20UI-FF4B4B.svg)](https://streamlit.io/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-REST%20Endpoints-009688.svg)](https://fastapi.tiangolo.com/)
+[![Vector Search](https://img.shields.io/badge/Vector%20Search-MMR%20%2B%20Cosine-8A2BE2.svg)](https://github.com/langchain-ai/langchain)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-> 🚀 **Live Cloud App**: **[https://everest-brewing-rag.streamlit.app/](https://everest-brewing-rag.streamlit.app/)**  
-> An end-to-end **Retrieval-Augmented Generation (RAG) AI Chatbot** and **Real-Time SCADA Operations Control Center** built entirely in **Python & SQL**.  
-> Features employee authentication, Quality & Rework Control, comprehensive HR Benefits & Vacation Policies, interactive Plotly industrial gauges, live telemetry historian logging, direct SQLite analytics explorer, and runtime SOP document ingestion.
+> [!NOTE]
+> **Educational & Research Demonstration Disclaimer:**  
+> This project, including the fictitious enterprise identity ("#Gyan Labs / HashGyan Technologies"), simulated technical whitepapers, and sample telemetry datasets, is created strictly for **educational, open-source portfolio demonstration, and technical RAG research**. All architectural benchmarks, server node identifiers, and company datasets are entirely synthetic. Any resemblance to real organizations is purely coincidental.
 
-> [!IMPORTANT]
-> **⚖️ Legal Disclaimer & Notice**:  
-> This open-source repository and demonstration application are developed **solely for independent academic, educational, and technical research purposes**.  
-> All operational benchmarks, standard operating procedures (SOPs), and SCADA telemetry data are synthetic, fictitious approximations designed solely to illustrate Retrieval-Augmented Generation (RAG) software architectures.
+**#GyanLabs-Enterprise-RAG** is a production-ready, modular **Retrieval-Augmented Generation (RAG)** platform engineered for high-throughput enterprise knowledge discovery. It combines **multi-source document ingestion** (Web URLs, PDFs, Markdown, CSV, JSON), **semantic intent query routing**, **hybrid vector search with Maximal Marginal Relevance (MMR)**, and **Natural Language Text-to-SQL analytics**.
 
 ---
 
-## 🔐 Employee Authentication & Access Control
+## 🌟 Key Architectural Innovations
 
-Access to the portal is restricted to authenticated company employees via Company Employee ID and password:
+```mermaid
+flowchart TD
+    subgraph Ingestion ["1. Multi-Source Ingestion Engine"]
+        URLs["Web URLs & Articles"]
+        PDFs["PDF Documents & Whitepapers"]
+        Docs["Markdown & Technical Specs"]
+        CSVData["Tabular CSV Datasets"]
+    end
 
-| Employee ID | Name | Role / Department | Security Clearance | Default Password |
-|---|---|---|---|---|
-| `EVR-1001` | Marcus Vance | Lead Packaging Operator (Production) | Level 2 - Plant Operations | `Everest2026!` |
-| `EVR-1042` | Dr. Sarah Lin | Master Brewer & QA Director (Quality) | Level 4 - Quality & Cellar Lead | `Everest2026!` |
-| `EVR-2005` | David Tremblay | EHS & Safety Compliance Manager (HR) | Level 4 - EHS Administrator | `Everest2026!` |
-| `ADMIN-001` | System Administrator | Enterprise Operations Admin | Level 5 - Master Access | `Everest2026!` |
+    subgraph CoreEngine ["2. RAG Core Pipeline (src/)"]
+        Chunker["Recursive Semantic Text Splitter"]
+        Embedder["Dense Sentence & Vector Embeddings"]
+        VectorDB["Hybrid Vector Store (MMR & Cosine)"]
+        Router["Semantic Intent Router (4 Routes)"]
+        SQLAgent["Natural Language Text-to-SQL Agent"]
+    end
 
----
+    subgraph Synthesis ["3. Grounding & Synthesis"]
+        Grounding["Source-Grounded Prompt Engine"]
+        LLM["Groq (LLaMA-3.3) / OpenAI / Local Synthesizer"]
+        Citations["Grounded Citation & Latency Tracker"]
+    end
 
-## 🌟 Key Departmental Modules
+    subgraph Interfaces ["4. Production Delivery Interfaces"]
+        StreamlitUI["Interactive Streamlit Dashboard (app.py)"]
+        RESTAPI["FastAPI REST Endpoints (api.py)"]
+    end
 
-| Pillar / Component | Feature Details |
-|---|---|
-| 🔬 **Quality & Rework Control** | **Analytical Quality Gate** (ABV 5.0% ± 0.1%, IBU 12.0, DO < 20 ppb, Micro 0 CFU/100mL, 5-member sensory release), **Double Seam Teardown** (Overlap >55%, Tightness >90%), **Line 4 Optical Inspector (EBI)** (99.98% accuracy), **Quarantine Holds & Rework SOPs** (deaerated CO₂ sparging, decanting), and **Live SQLite Non-Conformance Report (NCR) Rework Ticket Creator**. |
-| 🛡️ **HR, Benefits & Safety** | **Tenure Vacation Tiers** (1-3 yrs = 15 days; 4-7 yrs = 20 days; 8-12 yrs = 25 days; 13+ yrs = 30 days), **5 Paid Sick/Personal Days**, **10 Statutory Holidays (2.0x pay)**, **100% 16-Week Parental Top-Up**, **Healthcare & Dental Benefits** ($2,500/yr major dental, $450 vision, $1,000 mental health), **6% Pension Match**, **Shift Premiums** (+$1.25 afternoon, +$2.50 night), **EHS Gas Sensors** (NH₃, CO₂, CSE O₂ 20.9%), and **Live Near-Miss Incident Portal**. |
-| 🏭 **Production & Packaging** | 3 Dedicated Packaging Lines: **Line 1 Can** (~2,000 hL/8h), **Line 3 Can** (~1,800 hL/8h), **Line 4 Bottle** (1,000 bpm / 800–1,200 hL/8h), total shift throughput (~4,800 to 5,000 hL/8h). |
-| 🍺 **Brewing Science** | Mashing profiles (65°C rest), yeast pitching (*S. pastorianus* EVR-04), fermentation temp gauges, diacetyl reduction, pasteurization PU target (18 PU). |
-| 🚚 **Logistics & Fleet** | Cold-chain transit monitoring (-1.5°C to 4.0°C), distribution hubs, reverse logistics keg return cycle ($30 deposit). |
-| 💼 **Administration & ESG** | ERP PO 3-way matching, CapEx approval matrices, 2026 ESG goals (2.10 L/L water-to-beer ratio, 100% renewable power). |
-| 🤖 **RAG AI Assistant** | Jaccard + TF-IDF hybrid vector search with confidence scoring, execution time tracking, and expandable source citation cards. |
-| 🗄️ **SQL Database & Analytics** | Built-in SQLite database (`database/everest.db`) storing all chat queries, SCADA telemetry time series, incident reports, quality rework logs, and ingested documents with live SQL editor. |
+    Ingestion --> Chunker
+    Chunker --> Embedder
+    Embedder --> VectorDB
 
----
+    StreamlitUI <--> Router
+    RESTAPI <--> Router
 
-## 📐 System Architecture (100% Python & SQL)
+    Router -->|Knowledge Query| VectorDB
+    Router -->|Database Query| SQLAgent
+    Router -->|Instant Answer| FastFAQ["Cached Enterprise FAQ"]
+    Router -->|Chit-Chat| SmallTalk["Conversational Agent"]
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│               STREAMLIT WEB UI — app.py                         │
-│  ├── Employee Authentication Wall (Role-based ID & Password)    │
-│  ├── Executive Overview (KPI Metrics + Plotly SCADA Trends)     │
-│  ├── 🔬 Quality & Rework Hub (Analytical Lab + Double Seam)     │
-│  ├── 🛡️ HR, Benefits & Safety Hub (Vacation Tiers + EHS)        │
-│  ├── 3 Packaging Lines (Line 1 Can, Line 3 Can, Line 4 Bottle)  │
-│  ├── Department Control Panels (Brewing, Prod, Log, Admin, HR)  │
-│  ├── RAG AI Assistant (st.chat_message + Source Citations)      │
-│  └── SQL Database & Analytics Explorer (SQL Query Runner + CSV) │
-└────────────────────────┬────────────────────────────────────────┘
-                         │ Calls directly in Python
-                         ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                    PYTHON ENGINE LAYER                          │
-│  ├── rag_engine.py      (Hybrid vector search & context synthesis)│
-│  ├── kb_loader.py       (JSON ingestion + runtime memory sync)  │
-│  ├── live_telemetry.py  (SCADA sensor simulator & stream)        │
-│  └── everest_db.py      (SQLite ORM, Rework & Incident Logging) │
-└──────────────────┬─────────────────────────────┬────────────────┘
-                   │                             │
-                   ▼                             ▼
-┌──────────────────────────────────┐ ┌────────────────────────────┐
-│      SQLITE DATABASE             │ │   KNOWLEDGE BASE (JSON)    │
-│      database/everest.db         │ │   data/everest_kb/         │
-│  ├── chat_history table          │ │   ├── 01_logistics.json    │
-│  ├── telemetry_log table         │ │   ├── 02_brewing.json      │
-│  ├── incident_reports table      │ │   ├── 03_production.json   │
-│  ├── quality_rework_log table    │ │   ├── 04_administration.json│
-│  └── ingested_documents table    │ │   ├── 05_hr_compliance.json│
-│                                  │ │   └── 06_quality.json      │
-└──────────────────────────────────┘ └────────────────────────────┘
+    VectorDB --> Grounding
+    Grounding --> LLM
+    LLM --> Citations
+    Citations --> StreamlitUI
 ```
 
 ---
 
-## 🚀 Quick Start & Installation
+## 🚀 Feature Matrix & Capabilities
 
-### Step 1: Install Requirements
-```powershell
-python -m pip install streamlit plotly pydantic requests pandas
+| Feature | Technical Implementation | Benefit |
+| :--- | :--- | :--- |
+| **🌐 Multi-Source Ingestion** | `WebURLLoader`, `UniversalDocumentLoader` | Scrapes live URLs, parses PDFs, Markdown, JSON, Text, and CSV files in real-time. |
+| **✂️ Semantic Recursive Chunking** | `RecursiveTextSplitter` | Splits long documents with sliding window overlap while preserving section context and metadata. |
+| **🎯 Semantic Intent Routing** | `SemanticIntentRouter` | Classifies queries into Knowledge Retrieval, Text-to-SQL, Fast FAQ, or Conversational chat with confidence scores. |
+| **🔍 Hybrid Vector Search + MMR** | `HybridVectorStore` | Maximal Marginal Relevance (MMR) re-ranking balances semantic relevance with informational diversity. |
+| **📊 Natural Language Text-to-SQL** | `SQLAnalyticsAgent` | Translates natural language into safe, read-only SQLite queries over enterprise databases. |
+| **🛡️ Grounded Citations & Zero Hallucination** | `RAGGenerationChain` | Generates structured answers with exact bracketed document citations and relevance telemetry. |
+| **⚡ Zero-Dependency Offline Mode** | `DenseSemanticEmbeddings` | Operates seamlessly even without external API keys or heavy GPU runtimes. |
+
+---
+
+## 📁 Repository Structure
+
+```text
+Project HashGyan/RAG/
+├── data/                            # Sample enterprise documents & SQLite analytics
+│   ├── enterprise_docs/             # Technical whitepapers and architecture specs
+│   │   ├── 01_agentic_ai_orchestration.md
+│   │   ├── 02_hybrid_vector_retrieval_and_mmr.md
+│   │   ├── 03_zero_trust_security_and_governance.md
+│   │   └── 04_high_performance_gpu_clusters.md
+│   └── enterprise_analytics.db      # SQLite relational analytics database
+├── src/                             # Core Python Engine
+│   ├── __init__.py
+│   ├── config.py                    # Global configuration & environment settings
+│   ├── ingestion/                   # Document loaders & semantic text splitters
+│   │   ├── __init__.py
+│   │   ├── text_splitter.py         # Recursive character text chunker
+│   │   ├── document_loader.py       # Universal document loader (PDF, MD, CSV, JSON)
+│   │   └── url_loader.py            # Clean web article scraper
+│   ├── vectorstore/                 # Vector embeddings & database
+│   │   ├── __init__.py
+│   │   ├── embeddings.py            # SentenceTransformers & Dense vectorizer
+│   │   └── chroma_store.py          # Vector store with MMR re-ranking
+│   ├── router/                      # Semantic intent query routing
+│   │   ├── __init__.py
+│   │   └── intent_router.py         # Query classifier (4 routes)
+│   ├── generation/                  # Grounded synthesis & Text-to-SQL
+│   │   ├── __init__.py
+│   │   ├── prompts.py               # Source-grounded prompt templates
+│   │   ├── rag_chain.py             # LLM inference & citation tracking
+│   │   └── sql_agent.py             # NL-to-SQL query engine
+│   └── pipeline.py                  # Central enterprise RAG coordinator
+├── tests/
+│   ├── __init__.py
+│   └── test_rag_pipeline.py         # Pytest unit test suite
+├── app.py                           # Interactive Streamlit Web UI
+├── api.py                           # FastAPI REST API endpoints
+├── run_app.bat                      # Windows launcher
+├── pyproject.toml                   # Project packaging specification
+├── requirements.txt                 # Frozen dependencies
+├── .env.example                     # Environment variables sample
+├── LICENSE                          # MIT License
+└── README.md                        # Project documentation
 ```
 
-### Step 2: Run the Streamlit Application
-```powershell
-python -m streamlit run app.py
-```
-*(Or double-click `run_streamlit.bat` on Windows)*
+---
 
-The application opens automatically in your browser at:
-👉 **`http://localhost:8501`**
+## ⚡ Quickstart & Installation
+
+### 1. Clone & Set Up Virtual Environment
+
+```bash
+git clone https://github.com/Harish-Mathematican/GyanLabs-Enterprise-RAG.git
+cd GyanLabs-Enterprise-RAG
+
+python -m venv .venv
+# Windows:
+.venv\Scripts\activate
+# macOS/Linux:
+source .venv/bin/activate
+```
+
+### 2. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Configure Environment (Optional)
+
+Create a `.env` file (or copy `.env.example`):
+```ini
+GROQ_API_KEY=your_groq_api_key_here
+DEFAULT_LLM_MODEL=llama-3.3-70b-versatile
+```
+*(If no API keys are provided, the system automatically uses the internal zero-dependency synthesizer!)*
+
+---
+
+## 🖥️ Launching the Application
+
+### Option A: Launch Interactive Streamlit Dashboard
+```bash
+streamlit run app.py
+```
+*(Or double-click `run_app.bat` on Windows)*
+
+👉 Open **`http://localhost:8501`** in your browser.
+
+### Option B: Launch FastAPI REST Microservice
+```bash
+python api.py
+```
+👉 Open Swagger API Docs at **`http://localhost:8000/docs`**.
+
+---
+
+## 🧪 Testing & Verification
+
+Run the automated Pytest test suite:
+```bash
+python -m pytest tests/ -v
+```
+
+---
+
+## ⚖️ Legal & Educational Notice
+
+This project and its associated datasets, documentation, and simulated company structures ("#Gyan Labs / HashGyan Technologies") are developed strictly for **educational, instructional, research, and non-commercial portfolio demonstrations**. All data records and technical whitepapers are synthetically generated.
 
 ---
 
 ## 📜 License
 
-This project is licensed under the [MIT License](LICENSE) — © 2026 Everest Brewing RAG AI Platform Contributors.
+Distributed under the [MIT License](LICENSE).  
+Developed by **Harish Dhakal** (#Gyan Labs AI Systems Demo).
