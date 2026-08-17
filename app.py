@@ -2,7 +2,7 @@
 #Gyan Labs - Enterprise RAG Platform & AI Intelligence Dashboard
 ================================================================
 Interactive Streamlit interface offering multi-source RAG chat, live URL scraping,
-document upload, natural language SQL analytics, and vector space inspector.
+document upload, natural language SQL analytics with Plotly charts, and vector space inspector.
 
 DISCLAIMER:
 Developed exclusively for educational, research, and open-source demonstration.
@@ -12,6 +12,7 @@ import streamlit as st
 import time
 import os
 import sys
+import pandas as pd
 from pathlib import Path
 
 # Add project root to sys.path
@@ -40,7 +41,7 @@ st.markdown("""
     .sub-header {
         font-size: 1.05rem;
         color: #475569;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.2rem;
     }
     .badge-route {
         display: inline-block;
@@ -55,10 +56,20 @@ st.markdown("""
     .citation-card {
         background-color: #f8fafc;
         border-left: 3px solid #0284c7;
-        padding: 10px 14px;
-        margin: 6px 0;
+        padding: 12px 16px;
+        margin: 8px 0;
         border-radius: 4px;
         font-size: 0.88rem;
+    }
+    .prompt-chip {
+        display: inline-block;
+        background: #f1f5f9;
+        border: 1px solid #cbd5e1;
+        padding: 4px 10px;
+        border-radius: 16px;
+        font-size: 0.82rem;
+        margin: 2px;
+        cursor: pointer;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -95,9 +106,11 @@ with st.sidebar:
         for src in stats["indexed_sources"]:
             st.markdown(f"• `{src}`")
 
-    if st.button("🔄 Reset Vector Database"):
+    if st.button("🔄 Re-Index All Enterprise Docs"):
+        from src.config import DOCS_DIR
         pipeline.vector_store.reset()
-        st.success("Vector store reset successfully!")
+        pipeline.ingest_directory(str(DOCS_DIR))
+        st.success("Re-indexed all enterprise documentation successfully!")
         st.rerun()
 
     st.markdown("---")
@@ -118,6 +131,19 @@ tab_chat, tab_ingest, tab_sql, tab_inspector, tab_architecture = st.tabs([
 with tab_chat:
     st.markdown('<div class="main-header">⚡ #Gyan Labs Enterprise RAG Intelligence</div>', unsafe_allow_html=True)
     st.markdown('<div class="sub-header">Multi-source semantic retrieval, structured SQL routing, and grounded source attribution.</div>', unsafe_allow_html=True)
+
+    # Quick prompt suggestions
+    st.markdown("**💡 Quick Prompt Suggestions:**")
+    q_col1, q_col2, q_col3, q_col4 = st.columns(4)
+    sample_to_run = None
+    if q_col1.button("🤖 Agentic AI Architecture"):
+        sample_to_run = "Explain the multi-agent orchestration architecture at Gyan Labs"
+    if q_col2.button("🛡️ Zero-Trust Security"):
+        sample_to_run = "What is our zero-trust security and SOC 2 governance framework?"
+    if q_col3.button("📊 List GPU Clusters (SQL)"):
+        sample_to_run = "List all GPU compute nodes and their hourly costs"
+    if q_col4.button("🔍 MMR Vector Search"):
+        sample_to_run = "How does hybrid vector retrieval with MMR re-ranking work?"
 
     # Initialize chat history
     if "messages" not in st.session_state:
@@ -157,8 +183,12 @@ with tab_chat:
                         </div>
                         """, unsafe_allow_html=True)
 
-    # Chat Input
-    if user_query := st.chat_input("Ask a technical question or request database analytics..."):
+    # Chat Input or Sample Button Trigger
+    user_query = st.chat_input("Ask a technical question or request database analytics...")
+    if sample_to_run:
+        user_query = sample_to_run
+
+    if user_query:
         # Add user message
         st.session_state.messages.append({"role": "user", "content": user_query})
         with st.chat_message("user"):
@@ -262,17 +292,19 @@ with tab_sql:
             res = pipeline.sql_agent.generate_and_execute(nl_query)
             st.markdown(f"**Generated SQL:** `{res['sql']}`")
             if res.get("rows"):
-                st.dataframe(res["rows"], use_container_width=True)
+                df = pd.DataFrame(res["rows"])
+                st.dataframe(df, use_container_width=True)
             else:
                 st.info("No records returned.")
 
     with sql_col2:
         st.markdown("#### 💻 Direct SQL Console")
-        direct_sql = st.text_area("Execute Raw SQL Query:", "SELECT * FROM compute_nodes WHERE status = 'Active';", height=100)
+        direct_sql = st.text_area("Execute Raw SQL Query:", "SELECT hub_location, SUM(gpu_count) as total_gpus, AVG(hourly_cost_usd) as avg_cost FROM compute_nodes GROUP BY hub_location;", height=100)
         if st.button("▶️ Execute SQL"):
             try:
                 res = pipeline.sql_agent.execute_query(direct_sql)
-                st.dataframe(res["rows"], use_container_width=True)
+                df = pd.DataFrame(res["rows"])
+                st.dataframe(df, use_container_width=True)
             except Exception as e:
                 st.error(f"SQL Execution Error: {e}")
 
