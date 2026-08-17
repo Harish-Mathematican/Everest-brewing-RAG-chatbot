@@ -31,6 +31,8 @@ flowchart TD
         VectorDB["Hybrid Vector Store (MMR & Cosine)"]
         Router["Semantic Intent Router (4 Routes)"]
         SQLAgent["Natural Language Text-to-SQL Agent"]
+        FastFAQ["Cached Enterprise FAQ"]
+        SmallTalk["Conversational Agent"]
     end
 
     subgraph Synthesis ["3. Grounding & Synthesis"]
@@ -51,10 +53,10 @@ flowchart TD
     StreamlitUI <--> Router
     RESTAPI <--> Router
 
-    Router -->|"Knowledge Query"| VectorDB
-    Router -->|"Database Query"| SQLAgent
-    Router -->|"Instant Answer"| FastFAQ["Cached Enterprise FAQ"]
-    Router -->|"Chit-Chat"| SmallTalk["Conversational Agent"]
+    Router --> VectorDB
+    Router --> SQLAgent
+    Router --> FastFAQ
+    Router --> SmallTalk
 
     VectorDB --> Grounding
     Grounding --> LLM
