@@ -51,10 +51,10 @@ flowchart TD
     StreamlitUI <--> Router
     RESTAPI <--> Router
 
-    Router -->|Knowledge Query| VectorDB
-    Router -->|Database Query| SQLAgent
-    Router -->|Instant Answer| FastFAQ["Cached Enterprise FAQ"]
-    Router -->|Chit-Chat| SmallTalk["Conversational Agent"]
+    Router -->|"Knowledge Query"| VectorDB
+    Router -->|"Database Query"| SQLAgent
+    Router -->|"Instant Answer"| FastFAQ["Cached Enterprise FAQ"]
+    Router -->|"Chit-Chat"| SmallTalk["Conversational Agent"]
 
     VectorDB --> Grounding
     Grounding --> LLM
